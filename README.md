@@ -32,7 +32,12 @@ Missing Values & Deduplication - The dataset may contain missing or zero values 
 #### 4.1.2 Exploratory Data Analysis (EDA)
 Visual and statistical exploration helps identify trends, relationships, and potential outliers.
 Statistical summaries and visualizations (such as histograms, boxplots, and pair plots) will be used to explore relationships between features. Correlations between predictors (e.g., BMI, glucose level, age) and the target variable (diabetes status) will also be evaluated.
+##### Count Plot (Outcome Distribution) - 
+To see how many individuals in the dataset have diabetes (Outcome = 1) versus those who don't (Outcome = 0).
 
+**Insight for this case**: The dataset is slightly imbalanced, with more non-diabetic cases. This helps in choosing evaluation metrics like F1-score or ROC-AUC, which are better than accuracy for imbalanced data.
+##### Histograms (Distribution of Features) - 
+To visualize how features like BMI, Glucose, Age, Insulin are distributed across the population
 ### 4.2 Feature Engineering
 Based on insights from the Exploratory Data Analysis, new features are created to better capture underlying patterns in the data and improve model performance. For example, individuals were categorized into age groups (Young, Adult, Senior) to introduce demographic structure, and a Glucose-to-Insulin ratio was derived to reflect insulin sensitivity, which is a crucial indicator in diabetes prediction. These engineered features aim to provide additional context that raw variables may not fully express. One-hot encoding is used for categorical variables to make them compatible with machine learning algorithms.
 
