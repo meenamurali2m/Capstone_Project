@@ -26,20 +26,62 @@ This dataset contains the following attributes:
 9. **Outcome**: 1 indicates diabetes, 0 indicates no diabetes.
 
 ## 4. Methodology
-### 4.1 Data Preprocessing & Exploration
+### 4.0 Load the Data
+Import the dataset into our environment, using pandas library. This allows us to manipulate and explore the data, preparing it for analysis and model training.
+### 4.1 Understand the Data - Data Preprocessing & Exploration
+#### 4.1.1 Statistical Summary
+To Identify data quality issues, Detect the need for scaling or normalization, Highlight features with high variance that may dominate models if not scaled, 
+Justify feature engineering, such as categorizing age or deriving ratios
+
+Insights from Summary
+1. Outliers are present in Insulin, SkinThickness, and Pregnancies.
+2. Missing values if any will be encoded as 0s in features like Glucose and BMI and will be handled through median imputation.
+3. Skewness in variables like Insulin and SkinThickness may influence the model types and will be normalized or log-transformed.
+4. Standard deviations are high for Insulin and Glucose, indicating wide variation.
 #### 4.1.1 Data Loading & Cleaning
-Missing Values & Deduplication - The dataset may contain missing or zero values for certain features. These values will be handled through imputation techniques or removal, depending on their distribution. Duplicate entries will be removed if found.
+Missing Values & Deduplication - We check for missing values or zero values for certain features. These values will be handled through imputation techniques or removal, depending on their distribution. Duplicate entries will be removed if found.
 #### 4.1.2 Exploratory Data Analysis (EDA)
-Visual and statistical exploration helps identify trends, relationships, and potential outliers.
+Perform Visual and statistical exploration that helps identify trends, relationships, and potential outliers.
 Statistical summaries and visualizations (such as histograms, boxplots, and pair plots) will be used to explore relationships between features. Correlations between predictors (e.g., BMI, glucose level, age) and the target variable (diabetes status) will also be evaluated.
 ##### 4.1.2.1 Count Plot (Outcome Distribution) - 
 To see how many individuals in the dataset have diabetes (Outcome = 1) versus those who don't (Outcome = 0).
 ![Image](https://github.com/user-attachments/assets/8b6840a9-b788-4545-94b4-d9f3221113b1)
 
-**Insight for this case**: The dataset is slightly imbalanced, with more non-diabetic cases. This helps in choosing evaluation metrics like F1-score or ROC-AUC, which are better than accuracy for imbalanced data.
+We see that the dataset is slightly imbalanced, with more non-diabetic cases. This helps in choosing evaluation metrics like F1-score or ROC-AUC, which are better than accuracy for imbalanced data.
+
 ##### 4.1.2.2 Histograms (Distribution of Features) - 
 
-To visualize how features like BMI, Glucose, Age, Insulin are distributed across the population
+To visualize how features like Pregnancies, Glucose, BloodPressure, SkinThickness, Insulin, BMI,	DiabetesPedigreeFunction are distributed across the population
+
+![Image](https://github.com/user-attachments/assets/0f4c2dfa-5d83-4bff-9e12-a08b2b74568c)
+
+Some features (e.g., Insulin) are highly skewed, indicating outliers or irregular distribution. Others like Glucose show distinct peaks that may separate diabetic from non-diabetic individuals
+##### 4.1.2.3 Correlation Heatmap -
+
+To check how features are related to each other and to the Outcome
+
+![Image](https://github.com/user-attachments/assets/efb13d74-b4ec-4a02-aa23-bb0e71a7b837)
+
+Glucose, BMI, and Age show moderate to strong positive correlation with Outcome, making them promising predictors
+##### 4.1.2.4 Boxplots & Violin Plots -
+To compare feature value distributions across diabetic and non-diabetic groups
+
+![Image](https://github.com/user-attachments/assets/33cd501a-594b-452e-b5c5-5a4a4d725221)
+
+##### 4.1.2.5 Violin Plots - 
+To view both distribution shape and spread of each feature within each class.
+
+![Violin Plot](https://github.com/user-attachments/assets/0a31d2ae-5852-4158-a644-904105bc918b)
+
+Diabetic individuals have higher median Glucose and BMI. This visual confirmation supports using these features in the model.
+
+Glucose and Insulin show clear separation in distribution shapes between diabetic and non-diabetic patients. This reinforces their predictive power.
+KDE Plot - To Directly compare feature distributions
+![Image](https://github.com/user-attachments/assets/4843c154-561e-44ca-b220-337d15031b5a)
+
+Glucose shows a clear shift in distribution — highly relevant to diabetes prediction, BMI and Age show moderate predictive value, Insulin might be less impactful on its own
+
+
 ### 4.2 Feature Engineering
 Based on insights from the Exploratory Data Analysis, new features are created to better capture underlying patterns in the data and improve model performance. For example, individuals were categorized into age groups (Young, Adult, Senior) to introduce demographic structure, and a Glucose-to-Insulin ratio was derived to reflect insulin sensitivity, which is a crucial indicator in diabetes prediction. These engineered features aim to provide additional context that raw variables may not fully express. One-hot encoding is used for categorical variables to make them compatible with machine learning algorithms.
 
