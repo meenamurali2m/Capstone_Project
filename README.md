@@ -83,7 +83,7 @@ Statistical summaries and visualizations (such as histograms, boxplots, and pair
 ### 4.2 Feature Engineering
 Based on insights from the Exploratory Data Analysis, new features are created to better capture underlying patterns in the data and improve model performance. For example, individuals were categorized into age groups (Young, Adult, Senior) to introduce demographic structure, and a Glucose-to-Insulin ratio was derived to reflect insulin sensitivity, which is a crucial indicator in diabetes prediction. These engineered features aim to provide additional context that raw variables may not fully express. One-hot encoding is used for categorical variables to make them compatible with machine learning algorithms.
 
-We’ll also perform some light feature engineeringto include - 
+We’ll also perform some light feature engineering to include - 
 1. Creating age categories (e.g., Young Adult, Adult, Senior)
 2. Adding a derived feature: Glucose-to-Insulin ratio (to reflect insulin sensitivity)
 3. Dropping features with very low variance or weak correlation (after we did EDA)
@@ -96,35 +96,41 @@ Algorithms like Logistic Regression, SVM, and KNN are sensitive to feature magni
 Supervised Learning Models: Logistic Regression, Decision Trees, Random Forest, Support Vector Machines (SVM), and k-Nearest Neighbors (k-NN).
 Model Tuning: Hyperparameter optimization using GridSearchCV or RandomizedSearchCV will be used to fine-tune the models.
 
-### Baseline Model - Logistic Regression
-Confusion Matrix:
- [[83 17]
- [24 30]]
+#### 4.4.1 Baseline Model - We will use a simple, algorithm like Logistic Regression for the first baseline.
+
 ![Confusion Matrix - Logistic Regression](https://github.com/user-attachments/assets/12f3510c-580b-48bd-94e8-d97f5e0d0cc9)
 
+**Confusion Matrix Analysis**
 True Negatives (TN) = 83 → Non-diabetic predicted as non-diabetic ✔️
-
 False Positives (FP) = 17 → Non-diabetic predicted as diabetic ❌
-
 False Negatives (FN) = 24 → Diabetic predicted as non-diabetic ❌
-
 True Positives (TP) = 30 → Diabetic predicted as diabetic ✔️
 
-🧠 What This Means: 
-The model performs well on non-diabetic cases (class 0).
+**Baseline Logistic Regression Model Summary**
 
-It struggles a bit with diabetic cases (lower recall for class 1).
+Metric | Class 0 (Non-Diabetic) | Class 1 (Diabetic) | Notes
+Precision | 0.78 | 0.64 | When the model predicts diabetes, it's correct 64% of the time
+Recall | 0.83 | 0.56 | It correctly identifies 56% of actual diabetic cases (misses 44%)
+F1-score | 0.80 | 0.59 | Lower F1 for class 1 due to lower recall
+Accuracy | 73.4% overall |  | Balanced but favors non-diabetic predictions
 
-You may need to:
+**Insights from Logistic Regression Model**
+The model does well predicting non-diabetic individuals.
+But it misses many actual diabetic cases (high false negatives → recall = 0.56).
+In healthcare, missing a diabetic case can be risky — recall for class 1 is critical here.
 
-Try class balancing techniques (e.g., SMOTE, class weights)
-
-Use a more powerful model (e.g., Random Forest)
-
-Tune hyperparameters
-
-Explore more feature engineering or interaction terms
-
+**Next Steps**
+1. Try Other Models - Try models better suited for non-linear relationships or feature interactions:
+. Random Forest
+. XGBoost
+. SVM
+. k-NN
+2. Handle Class Imbalance - The dataset is slightly imbalanced (approx. 65% non-diabetic, 35% diabetic). Might use class_weight='balanced' in LogisticRegression
+3. Visualizations to Explore Further
+   
+****************************************************************************************************************************************************************************
+**NOTE: Once we try the other models the below sections will be finalized**
+****************************************************************************************************************************************************************************
 ### 4.5 Model Evaluation
 Performance will be evaluated using metrics such as Accuracy, Precision, Recall, F1-Score, and ROC-AUC.
 The data will be split into training and testing sets, and possibly cross-validation will be used to avoid overfitting and ensure reliable results.
@@ -134,45 +140,6 @@ The model should provide a reliable prediction of diabetes likelihood based on h
 Key features (e.g., BMI, glucose levels, age) will be identified as significant predictors of diabetes risk.
 The results will include performance metrics that validate the predictive ability of the selected models.
 The best model will enable early detection of diabetes, leading to better prevention strategies.
-
-Baseline Logistic Regression Model Summary
-
-Metric | Class 0 (Non-Diabetic) | Class 1 (Diabetic) | Notes
-Precision | 0.78 | 0.64 | When the model predicts diabetes, it's correct 64% of the time
-Recall | 0.83 | 0.56 | It correctly identifies 56% of actual diabetic cases (misses 44%)
-F1-score | 0.80 | 0.59 | Lower F1 for class 1 due to lower recall
-Accuracy | 73.4% overall |  | Balanced but favors non-diabetic predictions
-
-Interpretation
-The model does well predicting non-diabetic individuals.
-But it misses many actual diabetic cases (high false negatives → recall = 0.56).
-In healthcare, missing a diabetic case can be risky — recall for class 1 is critical here.
-
-Next Steps
-1. Try Other Models
-Try models better suited for non-linear relationships or feature interactions:
-
-Random Forest
-
-XGBoost
-
-SVM
-
-k-NN
-
-2. Handle Class Imbalance
-The dataset is slightly imbalanced (approx. 65% non-diabetic, 35% diabetic):
-
-Use class_weight='balanced' in LogisticRegression
-
-Try SMOTE or RandomOversampler for synthetic data balancing
-
-3. Visualizations to Explore Further
-ROC Curve & AUC Score to assess the trade-off between sensitivity and specificity
-
-Precision-Recall Curve, especially helpful when class imbalance matters
-
-
 
 ## 6. Importance of the Study
 ### Public Health Significance:
