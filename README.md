@@ -101,30 +101,33 @@ Model Tuning: Hyperparameter optimization using GridSearchCV or RandomizedSearch
 ![Confusion Matrix - Logistic Regression](https://github.com/user-attachments/assets/12f3510c-580b-48bd-94e8-d97f5e0d0cc9)
 
 **Confusion Matrix Analysis**
-True Negatives (TN) = 83 → Non-diabetic predicted as non-diabetic ✔️
-False Positives (FP) = 17 → Non-diabetic predicted as diabetic ❌
-False Negatives (FN) = 24 → Diabetic predicted as non-diabetic ❌
-True Positives (TP) = 30 → Diabetic predicted as diabetic ✔️
+
+1. True Negatives (TN) = 83 → Non-diabetic predicted as non-diabetic ✔️
+2. False Positives (FP) = 17 → Non-diabetic predicted as diabetic ❌
+3. False Negatives (FN) = 24 → Diabetic predicted as non-diabetic ❌
+4. True Positives (TP) = 30 → Diabetic predicted as diabetic ✔️
 
 **Baseline Logistic Regression Model Summary**
 
-Metric | Class 0 (Non-Diabetic) | Class 1 (Diabetic) | Notes
-Precision | 0.78 | 0.64 | When the model predicts diabetes, it's correct 64% of the time
-Recall | 0.83 | 0.56 | It correctly identifies 56% of actual diabetic cases (misses 44%)
-F1-score | 0.80 | 0.59 | Lower F1 for class 1 due to lower recall
-Accuracy | 73.4% overall |  | Balanced but favors non-diabetic predictions
+| Metric  | Class 0 (Non-Diabetic) | Class 1 (Diabetic)  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| Precision | 0.78 | 0.64 | When the model predicts diabetes, it's correct 64% of the time |
+| Recall | 0.83 | 0.56 | It correctly identifies 56% of actual diabetic cases (misses 44%) |
+| F1-score | 0.80 | 0.59 | Lower F1 for class 1 due to lower recall |
+| Accuracy | 73.4% overall |  | Balanced but favors non-diabetic predictions |
 
+  
 **Insights from Logistic Regression Model**
-The model does well predicting non-diabetic individuals.
-But it misses many actual diabetic cases (high false negatives → recall = 0.56).
-In healthcare, missing a diabetic case can be risky — recall for class 1 is critical here.
+1. The model does well predicting non-diabetic individuals.
+2. But it misses many actual diabetic cases (high false negatives → recall = 0.56).
+3. In healthcare, missing a diabetic case can be risky — recall for class 1 is critical here.
 
 **Next Steps**
 1. Try Other Models - Try models better suited for non-linear relationships or feature interactions:
-. Random Forest
-. XGBoost
-. SVM
-. k-NN
+1.1 Random Forest
+1.2 XGBoost
+1.3 SVM
+1.4. k-NN
 2. Handle Class Imbalance - The dataset is slightly imbalanced (approx. 65% non-diabetic, 35% diabetic). Might use class_weight='balanced' in LogisticRegression
 3. Visualizations to Explore Further
    
