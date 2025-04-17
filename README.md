@@ -35,59 +35,71 @@ To Identify data quality issues, Detect the need for scaling or normalization, H
 Justify feature engineering, such as categorizing age or deriving ratios
 
 #### 4.1.0.1 **Insights from Summary**
-1. Outliers are present in Insulin, SkinThickness, and Pregnancies.
-2. Missing values if any will be encoded as 0s in features like Glucose and BMI and will be handled through median imputation.
-3. Skewness in variables like Insulin and SkinThickness may influence the model types and will be normalized or log-transformed.
-4. Standard deviations are high for Insulin and Glucose, indicating wide variation.
++ Outliers are present in Insulin, SkinThickness, and Pregnancies.
++ Missing values if any will be encoded as 0s in features like Glucose and BMI and will be handled through median imputation.
++ Skewness in variables like Insulin and SkinThickness may influence the model types and will be normalized or log-transformed.
++ Standard deviations are high for Insulin and Glucose, indicating wide variation.
    
 #### 4.1.1 Data Loading & Cleaning
 Missing Values & Deduplication - We check for missing values or zero values for certain features. These values will be handled through imputation techniques or removal, depending on their distribution. Duplicate entries will be removed if found.
 
 #### 4.1.2 Exploratory Data Analysis (EDA)
-Perform Visual and statistical exploration that helps identify trends, relationships, and potential outliers.
-Statistical summaries and visualizations (such as histograms, boxplots, and pair plots) will be used to explore relationships between features. Correlations between predictors (e.g., BMI, glucose level, age) and the target variable (diabetes status) will also be evaluated.
++ Perform Visual and statistical exploration that helps identify trends, relationships, and potential outliers.
++ Statistical summaries and visualizations (such as histograms, boxplots, and pair plots) will be used to explore relationships between features. Correlations between predictors (e.g., BMI, glucose level, age) and the target variable (diabetes status) will also be evaluated.
 
-##### 4.1.2.1 Count Plot (Outcome Distribution) - To see how many individuals in the dataset have diabetes (Outcome = 1) versus those who don't (Outcome = 0).
+##### 4.1.2.1 Count Plot (Outcome Distribution) - 
+To see how many individuals in the dataset have diabetes (Outcome = 1) versus those who don't (Outcome = 0).
 ![Image](https://github.com/user-attachments/assets/8b6840a9-b788-4545-94b4-d9f3221113b1)
 
-##### 4.1.2.1.1 **Insights from Count Plot** - We see that the dataset is slightly imbalanced, with more non-diabetic cases. 
+##### 4.1.2.1.1 **Insights from Count Plot** - 
+We see that the dataset is slightly imbalanced, with more non-diabetic cases. 
 
-##### 4.1.2.2 Histograms (Distribution of Features) - To visualize how features like Pregnancies, Glucose, BloodPressure, SkinThickness, Insulin, BMI,	DiabetesPedigreeFunction are distributed across the population
+##### 4.1.2.2 Histograms (Distribution of Features) - 
+To visualize how features like Pregnancies, Glucose, BloodPressure, SkinThickness, Insulin, BMI,	DiabetesPedigreeFunction are distributed across the population
 
 ![Image](https://github.com/user-attachments/assets/0f4c2dfa-5d83-4bff-9e12-a08b2b74568c)
 
-##### 4.1.2.2.1 **Insights from Histogram** - Some features (e.g., Insulin) are highly skewed, indicating outliers or irregular distribution. Others like Glucose show distinct peaks that may separate diabetic from non-diabetic individuals
+##### 4.1.2.2.1 **Insights from Histogram** - 
+Some features (e.g., Insulin) are highly skewed, indicating outliers or irregular distribution. Others like Glucose show distinct peaks that may separate diabetic from non-diabetic individuals
 
-##### 4.1.2.3 Correlation Heatmap - To check how features are related to each other and to the Outcome
+##### 4.1.2.3 Correlation Heatmap - 
+To check how features are related to each other and to the Outcome
 
 ![Image](https://github.com/user-attachments/assets/efb13d74-b4ec-4a02-aa23-bb0e71a7b837)
 
-##### 4.1.2.3.1 **Insights from Heatmap** - Glucose, BMI, and Age show moderate to strong positive correlation with Outcome, making them promising predictors
+##### 4.1.2.3.1 **Insights from Heatmap** - 
+Glucose, BMI, and Age show moderate to strong positive correlation with Outcome, making them promising predictors
 
-##### 4.1.2.4 Boxplots Plots - To compare feature value distributions across diabetic and non-diabetic groups
+##### 4.1.2.4 Boxplots Plots - 
+To compare feature value distributions across diabetic and non-diabetic groups
 
 ![Image](https://github.com/user-attachments/assets/33cd501a-594b-452e-b5c5-5a4a4d725221)
 
-##### 4.1.2.4.1 **Insights from Box PLot** - Diabetic individuals have higher median Glucose and BMI. 
+##### 4.1.2.4.1 **Insights from Box PLot** - 
+Diabetic individuals have higher median Glucose and BMI. 
 
-##### 4.1.2.5 Violin Plots - To view both distribution shape and spread of each feature within each class.
+##### 4.1.2.5 Violin Plots - 
+To view both distribution shape and spread of each feature within each class.
 
 ![Violin Plot](https://github.com/user-attachments/assets/0a31d2ae-5852-4158-a644-904105bc918b)
 
-##### 4.1.2.5.1 **Insights from Violin Plot** - Glucose and Insulin show clear separation in distribution shapes between diabetic and non-diabetic patients. This reinforces their predictive power.
+##### 4.1.2.5.1 **Insights from Violin Plot** - 
+Glucose and Insulin show clear separation in distribution shapes between diabetic and non-diabetic patients. This reinforces their predictive power.
 
 
-##### 4.1.2.6 KDE Plot - To Directly compare feature distributions
+##### 4.1.2.6 KDE Plot - 
+To Directly compare feature distributions
 ![Image](https://github.com/user-attachments/assets/4843c154-561e-44ca-b220-337d15031b5a)
 
-##### 4.1.2.6.1 ****Insights from KDE Plot**** - Glucose shows a clear shift in distribution — highly relevant to diabetes prediction, BMI and Age show moderate predictive value, Insulin might be less impactful on its own
+##### 4.1.2.6.1 ****Insights from KDE Plot**** - 
+Glucose shows a clear shift in distribution — highly relevant to diabetes prediction, BMI and Age show moderate predictive value, Insulin might be less impactful on its own
 
 
 ### 4.2 Feature Engineering
 Based on insights from the Exploratory Data Analysis, new features are created to better capture underlying patterns in the data and improve model performance. We will also perform some light feature engineering to include - 
-1. Creating age categories (e.g., Young Adult, Adult, Senior)
-2. Adding a derived feature: Glucose-to-Insulin ratio (to reflect insulin sensitivity)
-3. Dropping features with very low variance or weak correlation (after we did EDA)
++ Creating age categories (e.g., Young Adult, Adult, Senior)
++ Adding a derived feature: Glucose-to-Insulin ratio (to reflect insulin sensitivity)
++ Dropping features with very low variance or weak correlation (after we did EDA)
 
 These engineered features aim to provide additional context that raw variables may not fully express. One-hot encoding is used for categorical variables to make them compatible with machine learning algorithms.
 
@@ -96,8 +108,8 @@ Features like Age, BMI, Glucose, etc., are on different scales and will be norma
 Algorithms like Logistic Regression, SVM, and KNN are sensitive to feature magnitudes. Scaling centers the data (mean = 0, std = 1), improving convergence and performance.
 
 ### 4.4 Machine Learning Models
-Supervised Learning Models: Logistic Regression, Decision Trees, Random Forest, Support Vector Machines (SVM), and k-Nearest Neighbors (k-NN).
-Model Tuning: Hyperparameter optimization using GridSearchCV or RandomizedSearchCV will be used to fine-tune the models.
++ Supervised Learning Models: Logistic Regression, Decision Trees, Random Forest, Support Vector Machines (SVM), and k-Nearest Neighbors (k-NN).
++ Model Tuning: Hyperparameter optimization using GridSearchCV or RandomizedSearchCV will be used to fine-tune the models.
 
 #### 4.4.1 Baseline Model - We will use a simple, algorithm like Logistic Regression for the first baseline.
 
@@ -105,10 +117,10 @@ Model Tuning: Hyperparameter optimization using GridSearchCV or RandomizedSearch
 
 #### 4.4.1.1 **Confusion Matrix Analysis**
 
-1. True Negatives (TN) = 83 → Non-diabetic predicted as non-diabetic ✔️
-2. False Positives (FP) = 17 → Non-diabetic predicted as diabetic ❌
-3. False Negatives (FN) = 24 → Diabetic predicted as non-diabetic ❌
-4. True Positives (TP) = 30 → Diabetic predicted as diabetic ✔️
++ True Negatives (TN) = 83 → Non-diabetic predicted as non-diabetic ✔️
++ False Positives (FP) = 17 → Non-diabetic predicted as diabetic ❌
++ False Negatives (FN) = 24 → Diabetic predicted as non-diabetic ❌
++ True Positives (TP) = 30 → Diabetic predicted as diabetic ✔️
 
 #### 4.4.1.2 **Baseline Logistic Regression Model Summary**
 
@@ -121,16 +133,16 @@ Model Tuning: Hyperparameter optimization using GridSearchCV or RandomizedSearch
 
   
 #### 4.4.1.3 **Insights from Logistic Regression Model**
-1. The model does well predicting non-diabetic individuals.
-2. But it misses many actual diabetic cases (high false negatives → recall = 0.56).
-3. In healthcare, missing a diabetic case can be risky — recall for class 1 is critical here.
++ The model does well predicting non-diabetic individuals.
++ But it misses many actual diabetic cases (high false negatives → recall = 0.56).
++ In healthcare, missing a diabetic case can be risky — recall for class 1 is critical here.
 
 #### 4.4.1.4 **Next Steps**
 1. Try Other Models - Try models better suited for non-linear relationships or feature interactions:
-1.1 Random Forest
-1.2 XGBoost
-1.3 SVM
-1.4. k-NN
++ Random Forest
++ XGBoost
++ SVM
++ k-NN
 2. Handle Class Imbalance - The dataset is slightly imbalanced (approx. 65% non-diabetic, 35% diabetic). Might use class_weight='balanced' in LogisticRegression
 3. Visualizations to Explore Further
    
