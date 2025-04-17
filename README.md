@@ -29,7 +29,7 @@ This dataset contains the following attributes:
 ### 4.0 Load the Data
 Import the dataset into our environment, using pandas library. This allows us to manipulate and explore the data, preparing it for analysis and model training.
 ### 4.1 Understand the Data - Data Preprocessing & Exploration
-#### 4.1.1 Statistical Summary
+#### 4.1.0 Statistical Summary
 To Identify data quality issues, Detect the need for scaling or normalization, Highlight features with high variance that may dominate models if not scaled, 
 Justify feature engineering, such as categorizing age or deriving ratios
 
