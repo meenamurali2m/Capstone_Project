@@ -11,6 +11,7 @@ Can machine learning models predict the likelihood of Type 2 diabetes in Pima In
 
 ## 3. Data Source
 The dataset used in this study is the Pima Indians Diabetes dataset, which is publicly available at the UCI Machine Learning Repository:
+
 Pima Indians Diabetes Dataset - https://www.kaggle.com/datasets/uciml/pima-indians-diabetes-database
 
 This dataset contains the following attributes:
