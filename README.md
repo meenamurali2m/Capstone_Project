@@ -227,6 +227,9 @@ Trained a Logistic Regression model as the baseline using the processed features
    + SVM
    + k-NN
 2. Visualizations to explore further
+3. Compare models
+4. Hyper parameters tuning
+5. Suggest best models
 
 ## 8. Outline of project
 
