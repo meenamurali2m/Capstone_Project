@@ -1,10 +1,8 @@
 ## 0. Project Title
 
-**Predictive Modeling for Diabetes Risk Assessment**
+## **Predictive Modeling for Diabetes Risk Assessment**
 
-**Author**
-
-Meena Murali
+### **Author** - Meena Murali
 
 ## 1. Executive SUmmary
 
