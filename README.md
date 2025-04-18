@@ -125,7 +125,8 @@ Algorithms like Logistic Regression, SVM, and KNN are sensitive to feature magni
 
 ### 4.4 Machine Learning Models
 
-#### 4.4.1 Baseline Model - We will use a simple, algorithm like Logistic Regression for the first baseline.
+#### 4.4.1 Baseline Model
+We will use a simple, algorithm like Logistic Regression for the first baseline.
 
 ##### 4.4.1.1 Confusion Matrix
 
