@@ -4,7 +4,7 @@ Jupyter Notebook - https://github.com/meenamurali2m/Capstone_Project/blob/main/C
 
 ## 1. Introduction
 
-### Business Problem
+### 1.1 Business Problem
 Diabetes, especially Type 2, is a critical global health issue, leading to severe complications such as heart disease, kidney failure, and increased mortality rates. Early diagnosis and intervention are essential for improving patients' quality of life and reducing healthcare costs. Type 2 diabetes is closely linked to lifestyle factors like poor diet, obesity, and lack of physical activity.
 
 The **Pima Indians Diabetes** dataset provides clinical data about individuals with a high prevalence of Type 2 diabetes, making it an ideal resource for predictive modeling. This study leverages machine learning techniques to predict the likelihood of diabetes occurrence based on health-related factors such as age, BMI, blood pressure, and glucose levels.
