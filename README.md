@@ -125,6 +125,13 @@ Algorithms like Logistic Regression, SVM, and KNN are sensitive to feature magni
 
 ![Confusion Matrix - Logistic Regression](https://github.com/user-attachments/assets/12f3510c-580b-48bd-94e8-d97f5e0d0cc9)
 
+| Metric  | Class 0 (Non-Diabetic) | Class 1 (Diabetic)  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| Precision | 0.78 | 0.64 | The model predicts diabetes correctly 64% of the time |
+| Recall | 0.83 | 0.56 | It correctly identifies 56% of actual diabetic cases (misses 44%) |
+| F1-score | 0.80 | 0.59 | Lower F1 for class 1 due to lower recall |
+| Accuracy | 73.4% overall |  | Seems Balanced but favors non-diabetic predictions |
+
  #### 4.4.1.1 **Insights from Logistic Regression Model**
 + The model does well predicting non-diabetic individuals.
 + But it misses many actual diabetic cases (high false negatives → recall = 0.56).
