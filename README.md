@@ -197,6 +197,7 @@ Trained a Logistic Regression model as the baseline using the processed features
 + The model performs reasonably well but struggles more with identifying diabetic cases (Class 1) — due to class imbalance and overlapping feature distributions.
 
 ### 4.6 Summary of Key Findings
+
 + Glucose, BMI, and Age are the top predictors of diabetes in the dataset.
 + The Glucose-to-Insulin Ratio and AgeGroup improved class separability.
 + Logistic Regression achieved an accuracy of 73.4%, setting a reliable baseline for more complex models
