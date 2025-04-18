@@ -140,7 +140,7 @@ Algorithms like Logistic Regression, SVM, and KNN are sensitive to feature magni
 | F1-score | 0.80 | 0.59 | Lower F1 for class 1 due to lower recall |
 | Accuracy | 73.4% overall |  | Seems Balanced but favors non-diabetic predictions |
 
- #### 4.4.1.3 **Insights from Logistic Regression Model**
+ ##### 4.4.1.3 Insights from Logistic Regression Model
 + The model does well predicting non-diabetic individuals.
 + But it misses many actual diabetic cases (high false negatives → recall = 0.56).
 + In healthcare, missing a diabetic case can be risky — recall for class 1 is critical here.
@@ -187,7 +187,7 @@ Trained a Logistic Regression model as the baseline using the processed features
 | F1-score | 0.80 | 0.59 | Lower F1 for class 1 due to lower recall |
 | Accuracy | 73.4% overall |  | Seems Balanced but favors non-diabetic predictions |
 
-##### 4.5.3.1 Confusion Matrix:
+##### 4.5.3.2 Confusion Matrix:
 
 + True Negatives (TN) = 83 → Non-diabetic predicted as non-diabetic ✔️
 + False Positives (FP) = 17 → Non-diabetic predicted as diabetic ❌
