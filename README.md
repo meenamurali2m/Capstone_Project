@@ -15,16 +15,16 @@ The **Pima Indians Diabetes** dataset provides clinical data about individuals w
 By comparing the performance of various machine learning models, the goal is to identify the most effective approach for early detection of diabetes, which can help healthcare providers and insurers reduce long-term costs and improve patient outcomes.
 
 ## 2 Rationale - Importance of the Study
-### 2.1 Public Health Significance:
+### 2.1 Public Health Significance
 Early detection of Type 2 diabetes can help reduce long-term healthcare costs and improve patient outcomes through earlier interventions, such as lifestyle changes and medication. This study aims to develop a predictive tool that helps healthcare providers identify individuals at high risk of diabetes before it progresses to more severe stages.
 
-### 2.2 Challenges:
+### 2.2 Challenges
 Healthcare providers and insurance companies face rising costs due to the increasing prevalence of diabetes and its complications. By accurately predicting diabetes risk, this study offers a potential solution for reducing costs associated with treating advanced diabetes-related complications. Healthcare providers can offer targeted prevention and treatment plans, while insurance companies can focus on early intervention, improving the overall health of the population and reducing claims related to chronic diabetes conditions.
 
-### 2.3 Impact of Unanswered Question:
+### 2.3 Impact of Unanswered Question
 If this question remains unanswered, individuals at high risk of diabetes may not receive timely intervention or monitoring, leading to worsening health outcomes and increased medical expenses. The lack of predictive tools makes it difficult for healthcare providers and insurers to manage the growing burden of diabetes on the healthcare system.
 
-### 2.4 Benefit of the Analysis:
+### 2.4 Benefit of the Analysis
 By providing a model that predicts diabetes risk, healthcare providers can offer more personalized care, focusing on prevention for high-risk individuals, thus reducing the overall cost burden.
 Insurance companies can use the predictive model to identify high-risk individuals and offer preventive care plans, potentially reducing the number of claims for expensive diabetic complications.
 This analysis will also serve as a foundation for creating more targeted health interventions, allowing healthcare systems to allocate resources more efficiently and improve patient outcomes.
