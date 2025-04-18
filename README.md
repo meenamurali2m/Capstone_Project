@@ -1,6 +1,6 @@
 ## 0. Code
 
-Jupyter Notebook - 
+Jupyter Notebook - https://github.com/meenamurali2m/Capstone_Project/blob/main/Capstone_MM.ipynb
 
 ## 1. Introduction
 
