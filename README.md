@@ -151,13 +151,12 @@ We will be using numerous models and do Model Tuning as listed below later. For 
 + In healthcare, missing a diabetic case can be risky — recall for class 1 is critical here.
 
 #### 4.4.1.4 **Next Steps**
-1. Try Other Models - Try models better suited for non-linear relationships or feature interactions:
-+ Random Forest
-+ XGBoost
-+ SVM
-+ k-NN
-2. Handle Class Imbalance - The dataset is slightly imbalanced (approx. 65% non-diabetic, 35% diabetic). Might use class_weight='balanced' in LogisticRegression
-3. Visualizations to Explore Further
+1. Try Other Models
+   + Random Forest
+   + XGBoost
+   + SVM
+   + k-NN
+2. Visualizations to explore further
    
 ****************************************************************************************************************************************************************************
 **NOTE: Once we try the other models and evaluate them, the below sections will be finalized**
