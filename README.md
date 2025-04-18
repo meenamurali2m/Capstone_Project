@@ -150,21 +150,21 @@ Algorithms like Logistic Regression, SVM, and KNN are sensitive to feature magni
 #### 4.5.1 Exploratory Data Analysis (EDA) Results
 The dataset contained 768 records with 8 clinical features and one target variable (Outcome) indicating diabetes diagnosis (1 = Diabetic, 0 = Non-Diabetic). Our EDA revealed several key insights:
 
-##### 4.5.1.1 **Class Distribution:**
+##### 4.5.1.1 Class Distribution
 + 65.1% Non-Diabetic (0)
 + 34.9% Diabetic (1)
 + This indicates a moderately imbalanced dataset.
 
-##### 4.5.1.2 Strongly Correlated Features with Diabetes:
+##### 4.5.1.2 Strongly Correlated Features with Diabetes
 + Glucose (correlation = 0.49) showed the strongest positive correlation with diabetes.
 + BMI (0.31), Age (0.24), and Pregnancies (0.22) also showed weak-to-moderate positive relationships.
 + Blood Pressure, Skin Thickness, and Insulin showed weak or near-zero correlation.
 
-##### 4.5.1.3 Distribution Patterns:
+##### 4.5.1.3 Distribution Patterns
 + Diabetic individuals tend to have higher glucose, BMI, and age levels.
 + KDE and box plots visualized this difference effectively.
 
-##### 4.5.1.4 New Features Created:
+##### 4.5.1.4 New Features Created
 + AgeGroup: Categorical bins (e.g., ‘20s’, ‘30s’, etc.)
 + Glucose-to-Insulin Ratio: A derived metric for insulin sensitivity
 + Both showed notable separation between diabetic and non-diabetic groups.
@@ -178,7 +178,7 @@ The dataset contained 768 records with 8 clinical features and one target variab
 #### 4.5.3 Baseline Machine Learning Model
 Trained a Logistic Regression model as the baseline using the processed features. 
 
-##### 4.5.3.1 Model Performance on Test Data:
+##### 4.5.3.1 Model Performance on Test Data
 
 | Metric  | Class 0 (Non-Diabetic) | Class 1 (Diabetic)  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
@@ -187,7 +187,7 @@ Trained a Logistic Regression model as the baseline using the processed features
 | F1-score | 0.80 | 0.59 | Lower F1 for class 1 due to lower recall |
 | Accuracy | 73.4% overall |  | Seems Balanced but favors non-diabetic predictions |
 
-##### 4.5.3.2 Confusion Matrix:
+##### 4.5.3.2 Confusion Matrix
 
 + True Negatives (TN) = 83 → Non-diabetic predicted as non-diabetic ✔️
 + False Positives (FP) = 17 → Non-diabetic predicted as diabetic ❌
