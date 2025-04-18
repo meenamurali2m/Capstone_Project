@@ -58,7 +58,7 @@ Missing Values & Deduplication - We check for missing values or zero values for 
 + **KDE plots** - To visualize feature distributions, such as age, by outcome class
   
 ##### 4.1.2.1 Count Plot (Outcome Distribution) - 
-To see how many individuals in the dataset have diabetes (Outcome = 1) versus those who don't (Outcome = 0).
+To see how many individuals (%) in the dataset have diabetes (Outcome = 1) versus those who don't (Outcome = 0).
 
 ![Image](https://github.com/user-attachments/assets/8b6840a9-b788-4545-94b4-d9f3221113b1)
 
