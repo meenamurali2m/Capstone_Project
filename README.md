@@ -10,9 +10,7 @@ By comparing the performance of various machine learning models, the goal is to 
 Can machine learning models predict the likelihood of Type 2 diabetes in Pima Indian women based on clinical features such as age, BMI, blood pressure, and glucose levels?
 
 ## 3. Data Source
-The dataset used in this study is the Pima Indians Diabetes dataset, which is publicly available at the UCI Machine Learning Repository:
-
-[Pima Indians Diabetes Dataset]([url](https://www.kaggle.com/datasets/uciml/pima-indians-diabetes-database))
+The dataset used in this study is the [Pima Indians Diabetes Dataset](https://www.kaggle.com/datasets/uciml/pima-indians-diabetes-database), which is publicly available at the UCI Machine Learning Repository.
 
 This dataset contains the following attributes:
 
@@ -69,7 +67,7 @@ To visualize how features like Pregnancies, Glucose, BloodPressure, SkinThicknes
 ![Image](https://github.com/user-attachments/assets/0f4c2dfa-5d83-4bff-9e12-a08b2b74568c)
 
 ##### 4.1.2.2.1 **Insights from Histogram** - 
-Some features (e.g., Insulin) are highly skewed, indicating outliers or irregular distribution. Others like Glucose show distinct peaks that may separate diabetic from non-diabetic individuals
+Some features (e.g., Insulin) are highly skewed, indicating outliers or irregular distribution. Others like Glucose show distinct peaks that may separate diabetic from non-diabetic individuals.
 
 ##### 4.1.2.3 Correlation Heatmap - 
 To check how features are related to each other and to the Outcome
@@ -157,7 +155,7 @@ Algorithms like Logistic Regression, SVM, and KNN are sensitive to feature magni
 3. Visualizations to Explore Further
    
 ****************************************************************************************************************************************************************************
-**NOTE: Once we try the other models the below sections will be finalized**
+**NOTE: Once we try the other models and evaluate them, the below sections will be finalized**
 ****************************************************************************************************************************************************************************
 ### 4.5 Model Evaluation
 Performance will be evaluated using metrics such as Accuracy, Precision, Recall, F1-Score, and ROC-AUC.
