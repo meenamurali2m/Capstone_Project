@@ -139,10 +139,10 @@ We will be using numerous models and do Model Tuning listed below later. **For n
 
 | Metric  | Class 0 (Non-Diabetic) | Class 1 (Diabetic)  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| Precision | 0.78 | 0.64 | When the model predicts diabetes, it's correct 64% of the time |
+| Precision | 0.78 | 0.64 | The model predicts diabetes correctly 64% of the time |
 | Recall | 0.83 | 0.56 | It correctly identifies 56% of actual diabetic cases (misses 44%) |
 | F1-score | 0.80 | 0.59 | Lower F1 for class 1 due to lower recall |
-| Accuracy | 73.4% overall |  | Balanced but favors non-diabetic predictions |
+| Accuracy | 73.4% overall |  | Seems Balanced but favors non-diabetic predictions |
 
   
 #### 4.4.1.3 **Insights from Logistic Regression Model**
