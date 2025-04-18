@@ -1,4 +1,9 @@
+## 0. Code
+
+Jupyter Notebook - 
+
 ## 1. Introduction
+
 ### Business Problem
 Diabetes, especially Type 2, is a critical global health issue, leading to severe complications such as heart disease, kidney failure, and increased mortality rates. Early diagnosis and intervention are essential for improving patients' quality of life and reducing healthcare costs. Type 2 diabetes is closely linked to lifestyle factors like poor diet, obesity, and lack of physical activity.
 
