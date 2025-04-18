@@ -65,6 +65,7 @@ To see how many individuals (%) in the dataset have diabetes (Outcome = 1) versu
 ##### 4.1.2.1.1 **Insights from Count Plot** - 
 We see that the dataset is slightly imbalanced, with more non-diabetic cases. 
 
+
 ##### 4.1.2.2 Histograms (Distribution of Features) - 
 To visualize how features like Pregnancies, Glucose, BloodPressure, SkinThickness, Insulin, BMI,	DiabetesPedigreeFunction are distributed across the population
 
@@ -72,6 +73,7 @@ To visualize how features like Pregnancies, Glucose, BloodPressure, SkinThicknes
 
 ##### 4.1.2.2.1 **Insights from Histogram** - 
 Some features (e.g., Insulin) are highly skewed, indicating outliers or irregular distribution. Others like Glucose show distinct peaks that may separate diabetic from non-diabetic individuals.
+
 
 ##### 4.1.2.3 Correlation Heatmap - 
 To check how features are related to each other and to the Outcome
@@ -81,6 +83,7 @@ To check how features are related to each other and to the Outcome
 ##### 4.1.2.3.1 **Insights from Heatmap** - 
 Glucose, BMI, and Age show moderate to strong positive correlation with Outcome, making them promising predictors.
 
+
 ##### 4.1.2.4 Boxplots Plots - 
 To compare feature value distributions across diabetic and non-diabetic groups
 
@@ -88,6 +91,7 @@ To compare feature value distributions across diabetic and non-diabetic groups
 
 ##### 4.1.2.4.1 **Insights from Box PLot** - 
 Diabetic individuals have higher median Glucose and BMI. 
+
 
 ##### 4.1.2.5 Violin Plots - 
 To view both distribution shape and spread of each feature within each class.
@@ -123,7 +127,11 @@ Algorithms like Logistic Regression, SVM, and KNN are sensitive to feature magni
 
 #### 4.4.1 Baseline Model - We will use a simple, algorithm like Logistic Regression for the first baseline.
 
+##### 4.4.1.1 Confusion Matrix
+
 ![Confusion Matrix - Logistic Regression](https://github.com/user-attachments/assets/12f3510c-580b-48bd-94e8-d97f5e0d0cc9)
+
+##### 4.4.1.2 Classification Report
 
 | Metric  | Class 0 (Non-Diabetic) | Class 1 (Diabetic)  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
@@ -132,7 +140,7 @@ Algorithms like Logistic Regression, SVM, and KNN are sensitive to feature magni
 | F1-score | 0.80 | 0.59 | Lower F1 for class 1 due to lower recall |
 | Accuracy | 73.4% overall |  | Seems Balanced but favors non-diabetic predictions |
 
- #### 4.4.1.1 **Insights from Logistic Regression Model**
+ #### 4.4.1.3 **Insights from Logistic Regression Model**
 + The model does well predicting non-diabetic individuals.
 + But it misses many actual diabetic cases (high false negatives → recall = 0.56).
 + In healthcare, missing a diabetic case can be risky — recall for class 1 is critical here.
