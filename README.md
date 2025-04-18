@@ -120,7 +120,7 @@ Features like Age, BMI, Glucose, etc., are on different scales and will be norma
 Algorithms like Logistic Regression, SVM, and KNN are sensitive to feature magnitudes. Scaling centers the data (mean = 0, std = 1), improving convergence and performance.
 
 ### 4.4 Machine Learning Models
-We will be using numerous models and do Model Tuning as listed below later. For now we run the basic model.
+We will be using numerous models and do Model Tuning listed below later. **For now we run the baseline model**.
 + Supervised Learning Models: Logistic Regression, Decision Trees, Random Forest, Support Vector Machines (SVM), and k-Nearest Neighbors (k-NN).
 + Model Tuning: Hyperparameter optimization using GridSearchCV or RandomizedSearchCV will be used to fine-tune the models.
 
