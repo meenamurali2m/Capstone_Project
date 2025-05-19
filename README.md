@@ -1,10 +1,6 @@
-## 0. Project Title
+## 0. Project Title - Predictive Modeling for Diabetes Risk Assessment
 
-## 0.1 **Predictive Modeling for Diabetes Risk Assessment**
-
-### 0.1.1 **Author** - Meena Murali
-
-## 1. Executive SUmmary
+## 1. Executive Summary
 
 ### 1.1 Business Problem
 Diabetes, especially Type 2, is a critical global health issue, leading to severe complications such as heart disease, kidney failure, and increased mortality rates. Early diagnosis and intervention are essential for improving patients' quality of life and reducing healthcare costs. Type 2 diabetes is closely linked to lifestyle factors like poor diet, obesity, and lack of physical activity.
@@ -51,19 +47,8 @@ This dataset contains the following attributes:
 ### 5.0 Load the Data
 Import the dataset into our environment, using pandas library. This allows us to manipulate and explore the data, preparing it for analysis and model training.
 
-### 5.1 Understand the Data - Data Preprocessing & Exploration
-#### 5.1.0 Statistical Summary
-To Identify data quality issues, Detect the need for scaling or normalization, Highlight features with high variance that may dominate models if not scaled, 
-Justify feature engineering, such as categorizing age or deriving ratios
-
-#### 5.1.0.1 **Insights from Summary**
-+ Outliers are present in Insulin, SkinThickness, and Pregnancies.
-+ Missing values if any will be encoded as 0s in features like Glucose and BMI and will be handled through median imputation.
-+ Skewness in variables like Insulin and SkinThickness may influence the model types and will be normalized or log-transformed.
-+ Standard deviations are high for Insulin and Glucose, indicating wide variation.
-   
-#### 5.1.1 Data Loading & Cleaning
-Missing Values & Deduplication - We check for missing values or zero values for certain features. These values will be handled through imputation techniques or removal, depending on their distribution. Duplicate entries will be removed if found.
+### 5.1 Understand the Data - 
+Perform Data Preprocessing & Visual Exploration to identify data quality issues such as missing values, duplicates, skewness, scaling issues and fix them. 
 
 #### 5.1.2 Exploratory Data Analysis (EDA)
 **Visualization:** - Perform Visual and statistical exploration that help identify trends, relationships, and potential outliers.
