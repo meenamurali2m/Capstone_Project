@@ -47,12 +47,12 @@ This dataset contains the following attributes:
 ### 5.0 Load & Understand the Data
 Import the dataset into our environment, using pandas library. This allows us to manipulate and explore the data, preparing it for analysis and model training. 
 
-### 5.1 Exploratory Data Analysis (EDA)
+### 5.1a Exploratory Data Analysis (EDA)
 Perform Data Preprocessing & Visual Exploration to identify data quality issues such as missing values, duplicates, skewness, scaling issues and fix them. Perform an initial visual distribution using Count Plots
 
 The dataset is slightly imbalanced, with more non-diabetic cases. Did some Fetaure Engineering and Feature scaling and then Trained a Logistic Regression model as the baseline on this dataset and found the accuracy score to be 73.4%
 
-### 5.2 Balanace the datset and run the EDA
+### 5.1b Balanace the datset and run the EDA
 We balanced the dataset and performed Visual and statistical exploration that help identify trends, relationships, and potential outliers. Some key plots are shown below.
 + **Count plots** - To visualize the distribution of diabetes outcomes
 ![Image](https://github.com/user-attachments/assets/f52612df-1cf0-4d04-9173-4a781b8b203b)
