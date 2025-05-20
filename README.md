@@ -47,16 +47,22 @@ This dataset contains the following attributes:
 ### 5.0 Load & Understand the Data
 Import the dataset into our environment, using pandas library. This allows us to manipulate and explore the data, preparing it for analysis and model training. 
 
-#### 5.1 Exploratory Data Analysis (EDA)
-Perform Data Preprocessing & Visual Exploration to identify data quality issues such as missing values, duplicates, skewness, scaling issues and fix them. Perform Visual and statistical exploration that help identify trends, relationships, and potential outliers.
+### 5.1 Exploratory Data Analysis (EDA)
+Perform Data Preprocessing & Visual Exploration to identify data quality issues such as missing values, duplicates, skewness, scaling issues and fix them. Perform an initial visual distribution using Count Plots
+
+The dataset is slightly imbalanced, with more non-diabetic cases. Did some Fetaure Engineering and Feature scaling and then Trained a Logistic Regression model as the baseline on this dataset and found the accuracy score to be 73.4%
+
+### 5.2 Balanace the datset and run the EDA
+We balanced the dataset and performed Visual and statistical exploration that help identify trends, relationships, and potential outliers.
 + **Count plots** - To visualize the distribution of diabetes outcomes
+  
 + **Histograms** - For feature distributions
 + **Correlation heatmaps** - To understand the relationships between variables
 + **Box plots** - To visualize the distribution of features like Glucose, BMI, etc., across diabetic and non-diabetic groups
 + **Violin plots** - To compare distributions of features like Glucose and Insulin between the two outcome classes
 + **KDE plots** - To visualize feature distributions, such as age, by outcome class
   
-
+###
 ### 5.2 Feature Engineering
 Based on insights from the Exploratory Data Analysis, new features are created to better capture underlying patterns in the data and improve model performance. We will also perform some light feature engineering to include - 
 + Creating age categories (e.g., Young Adult, Adult, Senior)
