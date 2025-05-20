@@ -55,16 +55,17 @@ The dataset is slightly imbalanced, with more non-diabetic cases. Did some Fetau
 ### 5.2 Balanace the datset and run the EDA
 We balanced the dataset and performed Visual and statistical exploration that help identify trends, relationships, and potential outliers.
 + **Count plots** - To visualize the distribution of diabetes outcomes
-  "C:\Users\mokas\OneDrive\Documents\UC Berkeley\Module 20\Capstone Project\Diabetes_Status_Balanced.png"
+  C:\Users\mokas\OneDrive\Documents\UC Berkeley\Module 20\Capstone Project\Diabetes_Status_Balanced.png
+
   
 + **Histograms** - For feature distributions
 + **Correlation heatmaps** - To understand the relationships between variables
-+ "C:\Users\mokas\OneDrive\Documents\UC Berkeley\Module 20\Capstone Project\Heat_Map_Balanced.png"
++ C:\Users\mokas\OneDrive\Documents\UC Berkeley\Module 20\Capstone Project\Heat_Map_Balanced.png
 + 
 + **Box plots** - To visualize the distribution of features like Glucose, BMI, etc., across diabetic and non-diabetic groups
 + **Violin plots** - To compare distributions of features like Glucose and Insulin between the two outcome classes
 + **KDE plots** - To visualize feature distributions, such as age, by outcome class
-  "C:\Users\mokas\OneDrive\Documents\UC Berkeley\Module 20\Capstone Project\KDE Plot_Balanced.png"
+  C:\Users\mokas\OneDrive\Documents\UC Berkeley\Module 20\Capstone Project\KDE Plot_Balanced.png
   
 
 ### 5.2 Feature Engineering
