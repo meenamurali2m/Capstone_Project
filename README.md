@@ -44,11 +44,8 @@ This dataset contains the following attributes:
 
 ## 5. Methodology
 
-### 5.0 Load the Data
-Import the dataset into our environment, using pandas library. This allows us to manipulate and explore the data, preparing it for analysis and model training.
-
-### 5.1 Understand the Data - 
-Perform Data Preprocessing & Visual Exploration to identify data quality issues such as missing values, duplicates, skewness, scaling issues and fix them. 
+### 5.0 Load & Understand the Data
+Import the dataset into our environment, using pandas library. This allows us to manipulate and explore the data, preparing it for analysis and model training. Perform Data Preprocessing & Visual Exploration to identify data quality issues such as missing values, duplicates, skewness, scaling issues and fix them. 
 
 #### 5.1.2 Exploratory Data Analysis (EDA)
 **Visualization:** - Perform Visual and statistical exploration that help identify trends, relationships, and potential outliers.
