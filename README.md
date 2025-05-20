@@ -55,6 +55,7 @@ The dataset is slightly imbalanced, with more non-diabetic cases. Did some Fetau
 ### 5.2 Balanace the datset and run the EDA
 We balanced the dataset and performed Visual and statistical exploration that help identify trends, relationships, and potential outliers.
 + **Count plots** - To visualize the distribution of diabetes outcomes
+
   C:\Users\mokas\OneDrive\Documents\UC Berkeley\Module 20\Capstone Project\Diabetes_Status_Balanced.png
 
   
