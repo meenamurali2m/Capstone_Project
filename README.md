@@ -53,16 +53,13 @@ Perform Data Preprocessing & Visual Exploration to identify data quality issues 
 The dataset is slightly imbalanced, with more non-diabetic cases. Did some Fetaure Engineering and Feature scaling and then Trained a Logistic Regression model as the baseline on this dataset and found the accuracy score to be 73.4%
 
 ### 5.2 Balanace the datset and run the EDA
-We balanced the dataset and performed Visual and statistical exploration that help identify trends, relationships, and potential outliers.
+We balanced the dataset and performed Visual and statistical exploration that help identify trends, relationships, and potential outliers. Some key plots are shown below.
 + **Count plots** - To visualize the distribution of diabetes outcomes
 ![Image](https://github.com/user-attachments/assets/f52612df-1cf0-4d04-9173-4a781b8b203b)
   
-+ **Histograms** - For feature distributions
 + **Correlation heatmaps** - To understand the relationships between variables
  ![Image](https://github.com/user-attachments/assets/63eb84f7-9067-4044-b9e7-23d2d01479b0)
-+ 
-+ **Box plots** - To visualize the distribution of features like Glucose, BMI, etc., across diabetic and non-diabetic groups
-+ **Violin plots** - To compare distributions of features like Glucose and Insulin between the two outcome classes
+
 + **KDE plots** - To visualize feature distributions, such as age, by outcome class
 ![Image](https://github.com/user-attachments/assets/96565f33-48ad-43a4-ad1b-ca00d922db1e)
   
