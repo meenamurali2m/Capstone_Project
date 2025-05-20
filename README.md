@@ -45,10 +45,10 @@ This dataset contains the following attributes:
 ## 5. Methodology
 
 ### 5.0 Load & Understand the Data
-Import the dataset into our environment, using pandas library. This allows us to manipulate and explore the data, preparing it for analysis and model training. Perform Data Preprocessing & Visual Exploration to identify data quality issues such as missing values, duplicates, skewness, scaling issues and fix them. 
+Import the dataset into our environment, using pandas library. This allows us to manipulate and explore the data, preparing it for analysis and model training. 
 
-#### 5.1.2 Exploratory Data Analysis (EDA)
-**Visualization:** - Perform Visual and statistical exploration that help identify trends, relationships, and potential outliers.
+#### 5.1 Exploratory Data Analysis (EDA)
+Perform Data Preprocessing & Visual Exploration to identify data quality issues such as missing values, duplicates, skewness, scaling issues and fix them. Perform Visual and statistical exploration that help identify trends, relationships, and potential outliers.
 + **Count plots** - To visualize the distribution of diabetes outcomes
 + **Histograms** - For feature distributions
 + **Correlation heatmaps** - To understand the relationships between variables
@@ -56,59 +56,6 @@ Import the dataset into our environment, using pandas library. This allows us to
 + **Violin plots** - To compare distributions of features like Glucose and Insulin between the two outcome classes
 + **KDE plots** - To visualize feature distributions, such as age, by outcome class
   
-##### 5.1.2.1 Count Plot (Outcome Distribution) - 
-To see how many individuals (%) in the dataset have diabetes (Outcome = 1) versus those who don't (Outcome = 0).
-
-![Image](https://github.com/user-attachments/assets/8b6840a9-b788-4545-94b4-d9f3221113b1)
-
-##### 5.1.2.1.1 **Insights from Count Plot** - 
-We see that the dataset is slightly imbalanced, with more non-diabetic cases. 
-
-
-##### 5.1.2.2 Histograms (Distribution of Features) - 
-To visualize how features like Pregnancies, Glucose, BloodPressure, SkinThickness, Insulin, BMI,	DiabetesPedigreeFunction are distributed across the population
-
-![Image](https://github.com/user-attachments/assets/0f4c2dfa-5d83-4bff-9e12-a08b2b74568c)
-
-##### 5.1.2.2.1 **Insights from Histogram** - 
-Some features (e.g., Insulin) are highly skewed, indicating outliers or irregular distribution. Others like Glucose show distinct peaks that may separate diabetic from non-diabetic individuals.
-
-
-##### 5.1.2.3 Correlation Heatmap - 
-To check how features are related to each other and to the Outcome
-
-![Image](https://github.com/user-attachments/assets/efb13d74-b4ec-4a02-aa23-bb0e71a7b837)
-
-##### 5.1.2.3.1 **Insights from Heatmap** - 
-Glucose, BMI, and Age show moderate to strong positive correlation with Outcome, making them promising predictors.
-
-
-##### 5.1.2.4 Boxplots Plots - 
-To compare feature value distributions across diabetic and non-diabetic groups
-
-![Image](https://github.com/user-attachments/assets/33cd501a-594b-452e-b5c5-5a4a4d725221)
-
-##### 5.1.2.4.1 **Insights from Box PLot** - 
-Diabetic individuals have higher median Glucose and BMI. 
-
-
-##### 5.1.2.5 Violin Plots - 
-To view both distribution shape and spread of each feature within each class.
-
-![Violin Plot](https://github.com/user-attachments/assets/0a31d2ae-5852-4158-a644-904105bc918b)
-
-##### 5.1.2.5.1 **Insights from Violin Plot** - 
-Glucose and Insulin show clear separation in distribution shapes between diabetic and non-diabetic patients. This reinforces their predictive power.
-
-
-##### 5.1.2.6 KDE Plot - 
-To Directly compare feature distributions
-
-![Image](https://github.com/user-attachments/assets/4843c154-561e-44ca-b220-337d15031b5a)
-
-##### 5.1.2.6.1 ****Insights from KDE Plot**** - 
-Glucose shows a clear shift in distribution — highly relevant to diabetes prediction, BMI and Age show moderate predictive value, Insulin might be less impactful on its own.
-
 
 ### 5.2 Feature Engineering
 Based on insights from the Exploratory Data Analysis, new features are created to better capture underlying patterns in the data and improve model performance. We will also perform some light feature engineering to include - 
