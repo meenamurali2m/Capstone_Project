@@ -103,8 +103,13 @@ Used GridSearchCV for XGBoost, SVM, and k-NN to optimize performance metrics (pr
 | k-NN                         | 0.800    | 0.762     | 0.850  | 0.803    |
 | Ensemble (Voting Classifier) | 0.880    | 0.820     | 0.970  | 0.890    |
 
+
+
 **Best Model:** Soft Voting Classifier with Logistic Regression, XGBoost, and SVM
 
+### 6.1 Model Testing
+
+Using the Model for Diabetes Prediction, we test a scenrio to predict the outcome if the patient is diabetic or non-diabetic
 ---
 
 ## 7. Final Recommendations
