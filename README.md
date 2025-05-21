@@ -144,5 +144,5 @@ This project demonstrates the effectiveness of machine learning in identifying i
 
 ## 9. Outline of project
 
-Jupyter Notebook - Capstone_MM - Final_Project.ipynb
+Jupyter Notebook - [Capstone_MM - Final_Project.ipynb](https://github.com/meenamurali2m/Capstone_Project/blob/main/Capstone_MM%20-%20Final_Project.ipynb)
 
