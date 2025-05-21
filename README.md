@@ -105,9 +105,11 @@ Used GridSearchCV for XGBoost, SVM, and k-NN to optimize performance metrics (pr
 Best Model: The Ensemble Model (Soft Voting) outperformed others across all key metrics.
 
 
+### 6.1 Model Performance Comparison
+
 ![Image](https://github.com/user-attachments/assets/16ac0f9c-7998-4738-b517-3058df8691b5)
 
-### 6.1 Model Testing
+### 6.2 Model Testing
 
 
 Using the Model for Diabetes Prediction, we test a scenrio to predict the outcome if the patient is diabetic or non-diabetic
