@@ -108,7 +108,9 @@ Best Model: The Ensemble Model (Soft Voting) outperformed others across all key 
 
 ### 6.1 Model Testing
 
+
 Using the Model for Diabetes Prediction, we test a scenrio to predict the outcome if the patient is diabetic or non-diabetic
+
 ---
 
 ## 7. Final Recommendations
