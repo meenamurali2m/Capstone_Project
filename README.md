@@ -95,12 +95,13 @@ Used GridSearchCV for XGBoost, SVM, and k-NN to optimize performance metrics (pr
 
 ## 6. Model Evaluation
 
-| **Model**                      | **Accuracy** | **Precision** | **Recall** | **F1 Score** |
-| ------------------------------ | ------------ | ------------- | ---------- | ------------ |
-| Logistic Regression (Baseline) | 0.740        | 0.750         | 0.720      | 0.735        |
-| XGBoost (Default)              | 0.865        | 0.812         | 0.950      | 0.876        |
-| XGBoost (GridSearchCV Tuned)   | 0.855        | 0.809         | 0.930      | 0.865        |
-| Ensemble Model (Soft Voting)   | **0.880**    | **0.890**     | **0.880**  | **0.890**    |
+| Model                            | Accuracy  | Precision | Recall    | F1 Score  |
+| -------------------------------- | --------- | --------- | --------- | --------- |
+| Logistic Regression (Baseline)   | 0.740     | 0.750     | 0.720     | 0.735     |
+| XGBoost (Default)                | 0.870     | 0.819     | 0.950     | 0.880     |
+| XGBoost (GridSearchCV)           | 0.870     | 0.830     | 0.930     | 0.877     |
+| **Ensemble Model (Soft Voting)** | **0.895** | **0.900** | **0.895** | **0.902** |
+
 
 Best Model: The Ensemble Model (Soft Voting) outperformed others across all key metrics.
 
