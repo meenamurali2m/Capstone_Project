@@ -67,6 +67,8 @@ Can machine learning models accurately predict the likelihood of Type 2 diabetes
 * Distribution plots and correlation heatmaps revealed strong positive correlation of diabetes with Glucose, BMI, and Age.
 * Diabetic individuals showed higher glucose levels and BMI.
 
+![Heat_Map_Balanced](https://github.com/user-attachments/assets/1614d48d-40de-4fff-b5f8-ee4cce0e7ee6)
+
 ### 5.3 Feature Engineering
 
 * Created new features:
@@ -81,10 +83,9 @@ Can machine learning models accurately predict the likelihood of Type 2 diabetes
 Trained and evaluated the following models:
 
 * Logistic Regression (Baseline)
-* XGBoost (Default & GridSearchCV Tuned)
-* Support Vector Machine (SVM)
-* k-Nearest Neighbors (k-NN)
-* Voting Classifier (Ensemble)
+* XGBoost (Default)
+* XGBoost (GridSearchCV Tuned)
+* Ensemble Model (Soft Voting) 
 
 ### 5.5 Hyperparameter Tuning
 
@@ -94,18 +95,16 @@ Used GridSearchCV for XGBoost, SVM, and k-NN to optimize performance metrics (pr
 
 ## 6. Model Evaluation
 
-| Model                        | Accuracy | Precision | Recall | F1 Score |
-| ---------------------------- | -------- | --------- | ------ | -------- |
-| Logistic Regression          | 0.740    | 0.750     | 0.720  | 0.735    |
-| XGBoost (Default)            | 0.865    | 0.812     | 0.950  | 0.876    |
-| XGBoost (Tuned)              | 0.855    | 0.809     | 0.930  | 0.865    |
-| SVM                          | 0.835    | 0.785     | 0.910  | 0.843    |
-| k-NN                         | 0.800    | 0.762     | 0.850  | 0.803    |
-| Ensemble (Voting Classifier) | 0.880    | 0.820     | 0.970  | 0.890    |
+| **Model**                      | **Accuracy** | **Precision** | **Recall** | **F1 Score** |
+| ------------------------------ | ------------ | ------------- | ---------- | ------------ |
+| Logistic Regression (Baseline) | 0.740        | 0.750         | 0.720      | 0.735        |
+| XGBoost (Default)              | 0.865        | 0.812         | 0.950      | 0.876        |
+| XGBoost (GridSearchCV Tuned)   | 0.855        | 0.809         | 0.930      | 0.865        |
+| Ensemble Model (Soft Voting)   | **0.880**    | **0.890**     | **0.880**  | **0.890**    |
 
+Best Model: The Ensemble Model (Soft Voting) outperformed others across all key metrics.
 
-
-**Best Model:** Soft Voting Classifier with Logistic Regression, XGBoost, and SVM
+![Image](https://github.com/user-attachments/assets/16ac0f9c-7998-4738-b517-3058df8691b5)
 
 ### 6.1 Model Testing
 
