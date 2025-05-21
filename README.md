@@ -141,7 +141,7 @@ Using the Model for Diabetes Prediction, we test a scenrio to predict the outcom
 This project demonstrates the effectiveness of machine learning in identifying individuals at risk for diabetes. With a robust ensemble model achieving nearly 88% accuracy and strong F1-score, this solution has the potential to support early diagnosis efforts and reduce healthcare burdens. Future work may involve integrating additional patient data, real-time monitoring, and broader demographic data for generalization.
 
 
-## 8. Outline of project
+## 9. Outline of project
 
 Jupyter Notebook - https://github.com/meenamurali2m/Capstone_Project/blob/main/Capstone_MM.ipynb
 
